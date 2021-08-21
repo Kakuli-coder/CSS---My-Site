@@ -10,7 +10,7 @@
     letter-spacing: 0.3em;
     align-self: stretch;
     text-align: center;
-    margin: 0;
+    margin: 0; 
     font-size: 2rem;
   }
   
@@ -18,6 +18,8 @@
     background-color: #66BFBF;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
   }
   
   .navigation {
@@ -28,7 +30,6 @@
     list-style: none;
     padding: 15px;
     letter-spacing: 0.3em;
-    margin: 0 30px 0 0;
   }
   
   .navigation li:hover {
@@ -116,16 +117,16 @@ p {
 }
 
 .pro {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .Kakuli {
-    height: 200px;
-    width: 120px;
-    border-style: solid;
-    border-color: #66BFBF;
-    border-width: 5px;
-    padding: 5px;
+  height: 200px;
+  width: 120px;
+  border-style: solid;
+  border-color: #66BFBF;
+  border-width: 5px;
+  padding: 5px;
 }
 
 .intro {
@@ -240,18 +241,17 @@ p {
     }
 }
 
-  @media screen and (max-width: 600px) {
-    .navigation {
-      flex-direction: column;
-      align-self: stretch;
-      padding-inline-start: 0;
-    }
-    .navigation li {
-      border-top: 1px inset #DDDDDD;
-      align-self: stretch;
-      text-align: center;
-    }
-    
+@media screen and (max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+    align-self: stretch;
+    padding-inline-start: 0;
+  }
+  .navigation li {
+    border-top: 1px inset #DDDDDD;
+    align-self: stretch;
+    text-align: center;
+  }
     h3 {
      font-size: 0.9rem;
     }

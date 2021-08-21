@@ -1,8 +1,18 @@
 /* Breakpoints: 990px and 600px*/
 
 .logo {
-    color: #ffffff;
     font-family: 'Allison', cursive;
+    animation: light 3s infinite;
+  }
+  
+  @keyframes light {
+    from {
+        color: #ffffff;
+    }
+    
+    to {
+        color: #66BFBF;
+    }
   }
   
   .flex-container h1 {

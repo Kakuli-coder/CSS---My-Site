@@ -35,7 +35,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -57,10 +57,10 @@
     }
   
   .drop {
-    position: absolute;
     background-color: #66BFBF;
+    position: absolute;
     left: 0;
-    top: 100%
+    top: 100%;
   }
     
   .drop li {
@@ -87,14 +87,13 @@ hr {
     border-top-style: dotted;
     border-width: 6px;
     width: 5%;
-    margin: 50px auto;
+    margin: 50px auto 0;
 }
 
 h1 {
     color: #66BFBF;
     font-family: 'Satisfy', cursive;
     font-size: 8vw; 
-    margin: 0;
     font-weight: normal;
 }
 
@@ -103,16 +102,21 @@ h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 5vw;
     font-weight: normal;
-    padding: 50px;
+    padding-top: 115px;
+    padding-bottom: 30px;
+}
+
+.web-developer {
+    padding-top: 30px;
 }
 
 h3 {
     color: #11999E;
+    font-size: 1.2rem;
 }
 
 p { 
     line-height: 2;
-    padding-bottom: 50px;
     color: #11999E;
 }
 
@@ -121,10 +125,7 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: #dbf6f7;
-}
-
-.middle-container {
-    margin: 50px 0;
+  padding-top: 30px;
 }
 
 .top-code {
@@ -154,6 +155,7 @@ p {
   border-color: #66BFBF;
   border-width: 5px;
   padding: 5px;
+  margin:115px auto 0 0;
   transition: height 2s, width 2s;
 }
 
@@ -163,14 +165,14 @@ p {
 }
 
 .intro {
-    margin: auto auto 50px auto;
+    margin: 50px auto;
     width: 30%;
     line-height: 2;
 }
 
 .img-skill {
     float: left;
-    width: 25%;
+    width: 30%;
     margin-right: 30px;
 }
 
@@ -181,9 +183,11 @@ p {
 }
 
 .skill-row {
-    width: 50%;
-    margin: 60px auto;
+    width: 60%;
+    margin: auto;
+    padding: 115px;
     text-align: left;
+    border: 1px solid white;
 }
 
 .connect {
@@ -259,6 +263,12 @@ p {
   .flex-container {
     flex-direction: column;
 }
+.skill-row {
+  width: 80%;
+}
+.top-code {
+  padding-top: 60px;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -290,6 +300,10 @@ h3 {
   }
   .intro {
     width: 60%;
+  }
+  .skill-row{
+    width: 80%;
+    padding: 50px;
   }
 }
 

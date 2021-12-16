@@ -31,47 +31,155 @@
      }
   }
     
-    .flex-container {
-      background-color: #66BFBF;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+  
+  /* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #66BFBF;
+  box-shadow: 1px 1px 4px 0 #4a4d4d;
+  width: 100%;
+  z-index: 3;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  padding: 20px 30px;
+  position: relative;
+  letter-spacing: 0.3em;
+}
+
+.navbar ul li:hover {
+  background-color: #22D1D7;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #66BFBF;
+}
+
+.dropdown ul {
+  display: block;
+}
+
+.dropdown ul li {
+  display: none;
+  letter-spacing: 0.2em;
+}
+
+.navbar ul li:hover .dropdown ul li{
+  display: block;
+}
+
+.navbar .menu-btn {
+  display: none;
+}
+
+
+@media screen and (max-width:990px){
+  .navbar {
+    flex-direction: column;
   }
   
-    .navigation {
-      list-style: none;
-      display: flex;
-    }
-    
-    .navigation li {
-      padding: 20px 30px;
-      letter-spacing: 0.3em;
-      position: relative;
-    }
-    
-    .navigation li:hover {
-      background-color: #22D1D7;
-    }
-  
-  .drop {
-    background-color: #66BFBF;
-    position: absolute;
-    left: 0;
-    top: 100%;
+  .logo {
+    padding: 20px 5px 5px 5px;
   }
-    
-  .drop li {
-    display: none;
-    letter-spacing: 0.2em;
+}
+
+@media screen and (max-width:600px){
+  .logo {
+    padding: 20px;
   }
   
-  .navigation li:hover .drop li {
+  .navbar {
     display: block;
   }
+  
+  .navbar ul {
+    display: none;
+  }
+  
+  .navbar ul li {
+    border-top: 1px inset white;
+    text-align: center;
+  }
+  
+  .navbar ul li:hover .dropdown ul li{
+  display: none;
+  }
+  
+  .navbar .menu-icon {
+  padding: 26px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.navbar .menu-icon .nav-icon {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: white;
+  transition: background 0.2s ease-out;
+}
+
+.navbar .menu-icon .nav-icon:before {
+  position: absolute;
+  content:"";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  background: white;
+  transition: background 0.2s ease-out;
+}
+
+.navbar .menu-icon .nav-icon:after {
+  position: absolute;
+  content:"";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: -5px;
+  background: white;
+  transition: background 0.2s ease-out;
+}
+  
+.navbar .menu-btn:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+  
+  .navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+ 
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  top: 0;
+  transform: rotate(45deg);
+}
+}
+
+  /* navbar ends*/
 
 
 body {
@@ -144,6 +252,31 @@ p {
 .pro {
   text-decoration: underline;
 }
+
+
+/* animation-slider */
+
+.carousel {
+  width: 50%;
+  height: 60vh;
+  background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
+  background-size: 100% 100%;
+  margin: 0 auto;
+  animation: slider 9s infinite linear;
+  transform: smooth;
+}
+
+@keyframes slider {
+  0%{background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
+    background-size: 100% 100%;}
+  34%{background-image: url(https://lucknowgraphics.com/wp-content/uploads/2020/09/web-development-in-Lucknow-994x1024.png);
+    background-size: 100% 100%;}
+  68%{background-image: url(https://pluspng.com/img-png/web-development-png-web-development-500.png);
+    background-size: 100% 100%;}
+}
+
+/* animation-slider ends */
+
 
 .Kakuli {
   height: 200px;
@@ -257,32 +390,24 @@ p {
  /* Breakpoints: 990px and 600px*/
 
  @media screen and (max-width: 990px){
-  .flex-container {
-    flex-direction: column;
-}
+   .top-container {
+     padding-top: 50px;
+   }
 .skill-row {
   width: 80%;
 }
 .top-code {
   padding-top: 60px;
 }
+.carousel {
+  height: 50vh;
+}
 }
 
 @media screen and (max-width: 600px) {
-.flex-container {
-  position: relative;
-}
-.navigation {
-  flex-direction: column;
-  width: 100%;
-}
-.navigation li {
-  border-top: 1px inset #DDDDDD;
-  text-align: center;
-}
-.navigation li:hover .drop li{
-display: none;
-}
+  .top-container {
+    padding-top: 0;
+  }
 h1 {
   font-size: 9vw;
 }
@@ -302,26 +427,7 @@ h3 {
     width: 80%;
     padding: 50px;
   }
+  .carousel {
+    height: 30vh;
+  }
 }
-
-/* animation-slider */
-
-.carousel {
-  width: 50%;
-  height: 500px;
-  background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
-  background-size: 100% 100%;
-  margin: 0 auto;
-  animation: slider 9s infinite linear;
-  transform: smooth;
-}
-
-@keyframes slider {
-  0%{background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
-    background-size: 100% 100%;}
-  34%{background-image: url(https://lucknowgraphics.com/wp-content/uploads/2020/09/web-development-in-Lucknow-994x1024.png);
-    background-size: 100% 100%;}
-  68%{background-image: url(https://pluspng.com/img-png/web-development-png-web-development-500.png);
-    background-size: 100% 100%;}
-}
-

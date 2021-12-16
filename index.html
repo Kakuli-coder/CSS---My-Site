@@ -15,16 +15,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
 
-  <div class="flex-container">
-    <h1 class="logo">Kakuli</h1> 
-    <ul class="navigation">
+  <div class="navbar">
+    <a class="logo">Kakuli</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <ul>
       <li><a href="#about">ABOUT ME</a></li>
       <li><a href="#skills">MY SKILLS</a>
-        <ul class="drop">
-        <li><a href="#writing">Writing</a></li>
-        <li><a href="#cooking">Cooking</a></li>
-        <li><a href="#graphic designing">Graphic Designing</a></li>
-      </ul>
+        <div class="dropdown">
+          <ul>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#cooking">Cooking</a></li>
+            <li><a href="#graphic designing">Graphic Designing</a></li>
+          </ul>
+        </div>
       </li>
       <li><a href="#contact">CONTACT ME</a></li>
     </ul>
@@ -37,7 +41,8 @@
         <h1>I'm Kakuli.</h1>
         <h2 class="web-developer"><span class="pro">Web</span> Developer</h2>
         <img class="bottom-code" src="https://media.giphy.com/media/MaI6BylfjAkDkfk4OC/giphy.gif" alt="code-img">
-        <div class="carousel"></div>
+        <div class="carousel">
+        </div>
     </div>
     <a name="about">
     <div class="middle-container">

@@ -13,7 +13,7 @@
   
   .logo {
       font-family: 'Allison', cursive;
-    padding: 5px 30px;
+      padding: 5px 30px;
       letter-spacing: 0.3em;
       font-size: 2rem;
       animation: light 3s infinite;
@@ -141,10 +141,6 @@ p {
   align-self: flex-start;
 }
 
-.cat-coding {
-  width: 60vw;
-}
-
 .pro {
   text-decoration: underline;
 }
@@ -188,7 +184,7 @@ p {
     margin: auto;
     padding: 115px;
     text-align: left;
-    border: 1px solid white;
+    border: 1.5px solid white;
 }
 
 .connect {
@@ -306,5 +302,26 @@ h3 {
     width: 80%;
     padding: 50px;
   }
+}
+
+/* animation-slider */
+
+.carousel {
+  width: 50%;
+  height: 500px;
+  background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
+  background-size: 100% 100%;
+  margin: 0 auto;
+  animation: slider 9s infinite linear;
+  transform: smooth;
+}
+
+@keyframes slider {
+  0%{background-image: url(https://i0.wp.com/promactinfo.com/wp-content/uploads/2019/03/web_dev_banner_img.png?fit=492%2C455&ssl=1);
+    background-size: 100% 100%;}
+  34%{background-image: url(https://lucknowgraphics.com/wp-content/uploads/2020/09/web-development-in-Lucknow-994x1024.png);
+    background-size: 100% 100%;}
+  68%{background-image: url(https://pluspng.com/img-png/web-development-png-web-development-500.png);
+    background-size: 100% 100%;}
 }
 

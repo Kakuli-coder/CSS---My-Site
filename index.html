@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kakuli</title>
 </head>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="icon" href="Kakuli.ico">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="images/Kakuli.ico">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fuggles&family=Playfair+Display&family=Satisfy&display=swap" rel="stylesheet">
+
 <body>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <div class="navbar">
-    <a class="logo">Kakuli</a>
+    <a href="#logo"class="logo">Kakuli</a>
     <input class="menu-btn" type="checkbox" id="menu-btn">
     <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
     <ul>
-      <li><a href="#about">ABOUT ME</a></li>
-      <li><a href="#skills">MY SKILLS</a>
+      <li><a href="#about"><i class="fas fa-user" id="fa-icon"></i> ABOUT ME</a></li>
+      <li><a href="#skills"><i class="fas fa-star" id="fa-icon"></i> MY SKILLS</a>
         <div class="dropdown">
           <ul>
             <li><a href="#writing">Writing</a></li>
@@ -30,12 +32,15 @@
           </ul>
         </div>
       </li>
-      <li><a href="#contact">CONTACT ME</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope" id="fa-icon"></i> CONTACT ME</a></li>
     </ul>
   </div>
 
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+  <a name="logo">
+    
+  <!-- top-container -->
     <div class="top-container">
        <img class="top-code" src="https://media.giphy.com/media/MaI6BylfjAkDkfk4OC/giphy.gif" alt="c9ode-img">
         <h1>I'm Kakuli.</h1>
@@ -44,20 +49,20 @@
         <div class="carousel">
         </div>
     </div>
+
     <a name="about">
-    <div class="middle-container">
-        <div class="profile">
-          <img class="Kakuli" src="Kakuli.jpeg" alt="Kakuli-img">
+  <!-- middle-container -->
+    <div>
+          <img class="Kakuli" src="images/Kakuli.jpeg" alt="Kakuli-img">
           <h2>Hello folks</h2>
           <h3 class="intro">I am an undergraduate in Civil Engineering who ❤️<em>Development and Design</em>👩🏽‍💻. I like to play around with my cute little 🐕 in the evenings.</h3>
-        </div>
         <hr>
         <a name="skills"></a>
-        <div class="skills">
+        <div>
           <h2> My Other Skills.</h2>
           <a name="writing">
           <div class="skill-row">
-            <img class="img-skill" src="Writing.png" alt="Writing-img">
+            <img class="img-skill" src="images/Writing.png" alt="Writing-img">
             <h3>Writing</h3>
             <p>I have loved writing since I was a child. Expressing what I feel and trying to bring a little positive change in the world has been my motive.</p>
           </div>
@@ -69,26 +74,26 @@
           </div>
           <a name="graphic designing">
           <div class="skill-row">
-            <img class="img-skill" src="Graphic_Designing.png" alt="Graphic_Designing-img">
+            <img class="img-skill" src="images/Graphic_Designing.png" alt="Graphic_Designing-img">
             <h3>Graphic Designing</h3>
             <p>I create websites, cards; thumbnails that people love using 'Canva' with beautiful colour combinations, fonts having a great UI and UX.</p>
           </div>
         </div>
         <hr>
         <a name="contact">
-        <div class="contact-me">
+        <div>
           <h2>Get In Touch</h2>
           <h3>If you love programming 💻 and enjoy face savouring food 😋.</h3>
           <p class="connect">Connect with me here. I am waiting for passionate learners who like munching snacks in the process like I do. Let's learn together. 😄 </p>
           <a class="btn" href="mailto:kakulibasu82@gmail.com" target="_blank">CONTACT ME</a>
         </div>
       </div>
-      
-      
+
+  <!-- bottom-container -->
     <div class="bottom-container">
-        <a class="footer-link" href="https://www.linkedin.com/in/kakuli-095983202/" target="_blank"><img class="footer-img" src="linkedin logo.png" alt="linkedin-logo-img"></a>
-        <a class="footer-link" href="https://github.com/Kakuli-coder" target="_blank"><img class="footer-img" src="github logo.png" alt="github-logo-img"></a>
-        <a class="footer-link" href="https://kakuli-coder.github.io/cv/#hi" target="_blank"><img class="footer-img" src="me.png" alt="me-img"></a>
+        <a href="https://www.linkedin.com/in/kakuli-095983202/" target="_blank"><img class="footer-img" src="images/linkedin logo.png" alt="linkedin-logo-img"></a>
+        <a href="https://github.com/Kakuli-coder" target="_blank"><img class="footer-img" src="images/github logo.png" alt="github-logo-img"></a>
+        <a href="https://kakuli-coder.github.io/cv/#hi" target="_blank"><img class="footer-img" src="images/me.png" alt="me-img"></a>
         <p class="copyright">© 2021 Kakuli.</p>
     </div>
   </body>
